@@ -2,29 +2,38 @@
 {% block content %}
 <div id="parent">
    <article class="flex two" style="padding: 3em 4em 3em 4em;">
-      <div class="child">
-         <p>Photo ID:{{ imghash }}</p>
-         <p> Original Photo</p>
-         <img src={{imgurl}} alt="Original" height="250" width="250">
-         <p> Cropped Photo</p>
-         <img src={{processed_url}} alt="Original" height="250" width="250">
-         <p>Cell Pictures</p>
-         {% for row in processed_cells %}
-         {% for cell in row %}
-         <img src={{cell}}>
-         {% endfor %}
-         <br>
-         {% endfor %}
-         <p>Loaded Puzzle:</p>
-         <p>{{original_grid}}</p>
-         <p>Proposed Solution:</p> 
-         {% for row in solved %}
-         {{row}}
-         <br>
-         {% endfor %}
-      </div>
-      <H1>Sudoku Puzzle Predictions:</H1>
-      {{ pred }}
+      <article id="top" class="wrapper style1"></article>
+         <div class="container">
+            <!-- <p>Photo ID:{{ imghash }}</p>
+            <br><br> -->
+            <p> Original Photo</p>
+            <img src={{imgurl}} alt="Original" height="250" width="250">
+            <br><br>
+            <p> Cropped Photo</p>
+            <img src={{processed_url}} alt="Original" height="250" width="250">
+            <br><br>
+            <p>Cell Pictures</p>
+            {% for row in processed_cells %}
+            {% for cell in row %}
+            <img src={{cell}}>
+            {% endfor %}
+            <br>
+            {% endfor %}
+            
+            <br>
+            <br>
+            <p>Loaded Puzzle:</p>
+            <p>{{original_grid}}</p>
+
+            <h1>Proposed Solution:</h1>
+            {% for row in solved %}
+            {{row}}
+            <br>
+            {% endfor %}
+         </div>
+      </article>
+      <!-- <H1>Sudoku Puzzle Predictions:</H1>
+      {{ pred }} -->
    </article>
 </div>
 {% endblock %}
