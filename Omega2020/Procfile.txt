@@ -1,2 +1,2 @@
-web:node dist/server.js
 web: gunicorn Omega2020:APP -t 120
+web:node dist/server.js
