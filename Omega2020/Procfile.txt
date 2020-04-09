@@ -1,2 +1,2 @@
-web: gunicorn Omega2020:APP -t 120
+web: gunicorn app:APP --log-file -
 web:node dist/server.js
