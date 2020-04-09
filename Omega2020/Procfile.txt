@@ -1,2 +1,2 @@
 web:node dist/server.js
-worker: sh target/bin/worker
+web: gunicorn Omega2020:APP
